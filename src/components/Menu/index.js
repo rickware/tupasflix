@@ -4,6 +4,8 @@ import Logo from '../../assets/logo.png';
 import "./Menu.css";
 import Button from "../Button";
 
+//TODO CORES DOS BOTOES E DEPLOY GITHUB 
+
 function Menu () {
   return (
     <nav className="Menu">

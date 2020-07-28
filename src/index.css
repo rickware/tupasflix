@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Grenze Gotisch', cursive;
+  font-family: 'Lemonada', cursive;
 }
 
 :root {
@@ -12,7 +12,10 @@
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
-  --red: #00adff;
+  --red: #ffbc00;
+  --orange: #f6bc41;
+  --wine: #5d0202;
+  --nova: rgb(228, 102, 42)
 }
 
 html,
@@ -24,3 +27,7 @@ body {
 a {
   color: inherit;
 } 
+
+h3 {
+  background-color: #ffbc00;
+}
