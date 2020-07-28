@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+import tupas from '../../assets/Tupas.jpg';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -16,19 +17,20 @@ export default function BannerMain({
   url,
 }) {
   const youTubeID = getYouTubeId(url);
-  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
+  //const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
   return (
-    <BannerMainContainer backgroundImage={bgUrl}>
+    <BannerMainContainer backgroundImage={tupas}>
       <ContentAreaContainer>
         <ContentAreaContainer.Item>
-          <ContentAreaContainer.Title>
+         {/* <ContentAreaContainer.Title>
             {videoTitle}
           </ContentAreaContainer.Title>
-
+        
           <ContentAreaContainer.Description>
             {videoDescription}
           </ContentAreaContainer.Description>
+        */}
         </ContentAreaContainer.Item>
 
         <ContentAreaContainer.Item>

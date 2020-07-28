@@ -1,8 +1,10 @@
 import React from "react";
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/Logo.png';
 //import ButtonLink from '../ButtonLink';
 import "./Menu.css";
 import Button from "../Button";
+
+//TODO CORES DOS BOTOES E DEPLOY GITHUB 
 
 function Menu () {
   return (

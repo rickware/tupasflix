@@ -1,5 +1,6 @@
 .Logo {
-  max-width: 168px;
+  max-width: 333px;
+  margin-top: 10px;
 }
 @media (max-width: 800px) {
   .Logo {
@@ -42,8 +43,8 @@ body {
 }
 
 .ButtonLink {
-  color: var(--white);
-  border: 1px solid var(--white);
+  color: var(--wine);
+  border: 1px solid var(--wine);
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
