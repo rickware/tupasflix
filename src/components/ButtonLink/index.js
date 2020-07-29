@@ -1,4 +1,4 @@
-import React from "react";
+import React from "../NotFound/node_modules/react";
 
 function ButtonLink(props) {
   return (
