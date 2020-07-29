@@ -31,3 +31,9 @@ a {
 h3 {
   background-color: #ffbc00;
 }
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}
