@@ -34,11 +34,20 @@ body {
 @media (max-width: 800px) {
   .Menu {
     height: 40px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
   }
   body {
     --bodyPaddingTop: 40px;
     padding-top: var(--bodyPaddingTop);
+  }
+  a.ButtonLink {
+    border-radius: 0;
+    text-align: center;
+    height: 80%;
+    display: inline-block;
+    font-size: inherit;
+    padding: 0 2%;
   }
 }
 
@@ -61,7 +70,7 @@ body {
 .ButtonLink:focus {
   opacity: .5;
 }
-
+/*
 @media (max-width: 800px) {
   a.ButtonLink {
     position: fixed;
@@ -74,3 +83,4 @@ body {
     text-align: center;
   }
 }
+*/
