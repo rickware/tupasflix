@@ -6,7 +6,7 @@ import Slider, { SliderItem } from './components/Slider';
 
 function Carousel({
   ignoreFirstVideo,
-  category,
+  category
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
@@ -50,8 +50,12 @@ function Carousel({
   );
 }
 
+Carousel.defaultProps = {
+  ignoreFirstVideo: false
+};
+
 Carousel.propTypes = {
-  ignoreFirstVideo: PropTypes.string.isRequired,
+  ignoreFirstVideo: PropTypes.bool,
   category: PropTypes.string.isRequired
 };
 

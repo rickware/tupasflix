@@ -1,4 +1,9 @@
 {
+  "description": "Imersao React/ALURA",
+  "main": "index.jsx",
+  "repository": "https://github.com/rickware/tupasflix.git",
+  "author": "rickware <ricardo.c.rod@outlook.com>",
+  "license": "MIT",
   "name": "tupasflix",
   "version": "0.1.0",
   "private": true,
@@ -25,10 +30,14 @@
     "**/**/lodash": "^4.17.12"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node ./server.js",
+    "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server:static": "json-server --watch ./src/data/db.json --port 8080",
+    "web": "react-scripts start",
+    "server": "node ./server.js"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -54,16 +63,5 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8"
-  },
-  "Depois": {
-    "scripts": {
-      "start": "node ./server.js",
-      "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject",
-      "server:static": "json-server --watch ./src/data/db.json --port 8080",
-      "server": "node ./server.js"
-    }
   }
 }

@@ -1,5 +1,4 @@
-const { off } = require("process");
-
+//const { off } = require("process");
 module.exports = {
   env: {
     browser: true,

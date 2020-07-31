@@ -70,11 +70,14 @@ export const BannerMainContainer = styled.section`
   position: relative;
   color: #fff;
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
-  background-size: cover;
+  background-size: 99% 99%;
   background-position: center;
+  background-repeat: no-repeat;
   @media (max-width: 800px) {
     height: auto;
     min-height: 50vh;
+     background-position: top;
+     width: 100vw;
   }
 
   &:after,
@@ -113,9 +116,9 @@ export const WatchButton = styled.button`
   text-decoration: none;
   display: inline-block;
   border: 1px solid transparent;
-  color: var(--wine);
+  color: var(--frontEnd);
   background: var(--primary);
-  border-color: var(--orange);
+  border-color: var(--blackLighter);
   transition: opacity .3s;
   display: none;
   margin: 0 auto;

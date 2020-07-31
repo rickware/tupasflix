@@ -26,7 +26,7 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
 VideoCard.propTypes = {
   videoTitle: PropTypes.string.isRequired,
   videoURL: PropTypes.string.isRequired,
-  categoryColor: PropTypes.number.isRequired
+  categoryColor: PropTypes.string.isRequired
 };
 
 export default VideoCard;
