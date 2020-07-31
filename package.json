@@ -65,5 +65,10 @@
       "server:static": "json-server --watch ./src/data/db.json --port 8080",
       "server": "node ./server.js"
     }
-  }
+  },
+  "description": "Imersao React/ALURA",
+  "main": "index.jsx",
+  "repository": "https://github.com/rickware/tupasflix.git",
+  "author": "rickware <ricardo.c.rod@outlook.com>",
+  "license": "MIT"
 }
