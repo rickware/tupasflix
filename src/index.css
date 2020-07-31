@@ -26,6 +26,7 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 } 
 
 h3 {
@@ -36,16 +37,4 @@ h3 {
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
   flex-direction: column;
-}
-
-.formField {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 70vh;
-  margin-left: 20vh;
-}
-form button {
-  margin: 1vw 50vh;
-  background-color: var(--orange);
 }

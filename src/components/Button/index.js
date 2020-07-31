@@ -1,12 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Button = styled(Link)`
   color: var(--wine);
   border: 1px solid var(--wine);
+  background-color: var(--orange);
   box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 24px;
+  margin: 1vw 50vh;
+  padding: 0 24px;
+  height: 36px;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -22,4 +25,3 @@ const Button = styled(Link)`
 `;
 
 export default Button;
-
