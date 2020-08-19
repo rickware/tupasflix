@@ -10,13 +10,13 @@ function create(objetoDoVideo) {
     },
     body: JSON.stringify(objetoDoVideo),
   })
-    .then(async (respostaDoServidor) => {
-      if (respostaDoServidor.ok) {
-        const resposta = await respostaDoServidor.json();
+    .then(async (response) => {
+      if (response.ok) {
+        const resposta = await response.json();
         return resposta;
       }
 
-      throw new Error('Não foi possível cadastrar os dados :(');
+      throw new Error('Não foi possível cadastrar os dados');
     });
 }
 

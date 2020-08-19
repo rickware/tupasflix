@@ -5,16 +5,13 @@ function useForm(valoresIniciais) {
 
   function setValue(chave, valor) {
     // chave: nome, descricao, bla, bli
-    setValues({
-      ...values,
-      [chave]: valor, // nome: 'valor'
-    });
+    setValues({ ...values, [chave]: valor }); // nome: 'valor'
   }
 
-  function handleChange(infosDoEvento) {
+  function handleChange(e) {
     setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value,
+      e.target.getAttribute('name'),
+      e.target.value,
     );
   }
 
