@@ -1,8 +1,10 @@
-const jsonServer = require('json-server');
+import pkg from 'json-server';
 
-const server = jsonServer.create();
-const router = jsonServer.router('./src/data/dbtupasflix.json');
-const middlewares = jsonServer.defaults();
+const { create, router: _router, defaults } = pkg;
+
+const server = create();
+const router = _router('./src/data/dbtupasflix.json');
+const middlewares = defaults();
 const port = process.env.PORT || 8080;
 
 server.use(middlewares);

@@ -1,13 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { shape } from 'prop-types';
 import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
-function Carousel({
-  ignoreFirstVideo,
-  category
-}) {
+function Carousel({ ignoreFirstVideo, category }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
@@ -20,10 +17,7 @@ function Carousel({
             {categoryTitle}
           </Title>
           {categoryExtraLink && (
-            <ExtraLink
-              href={categoryExtraLink.url}
-              target="_blank"
-            >
+            <ExtraLink href={categoryExtraLink.url} target="_blank">
               {categoryExtraLink.text}
             </ExtraLink>
           )}
@@ -31,10 +25,7 @@ function Carousel({
       )}
       <Slider>
         {videos.map((video, index) => {
-          if (ignoreFirstVideo && index === 0) {
-            return null;
-          }
-
+          if (ignoreFirstVideo && index === 0) { return null; }
           return (
             <SliderItem key={video.titulo}>
               <VideoCard
@@ -56,7 +47,21 @@ Carousel.defaultProps = {
 
 Carousel.propTypes = {
   ignoreFirstVideo: PropTypes.bool,
-  category: PropTypes.string.isRequired
+  category: PropTypes.shape({
+    id: PropTypes.number,
+    titulo: PropTypes.string,
+    cor: PropTypes.string,
+    link_extra: PropTypes.shape({
+      text: PropTypes.string,
+      url: PropTypes.string
+    }),
+    videos: PropTypes.arrayOf(shape({
+      id: PropTypes.number,
+      categoriaId: PropTypes.number,
+      titulo: PropTypes.string,
+      url: PropTypes.string
+    }))
+  }).isRequired
 };
 
 export default Carousel;
