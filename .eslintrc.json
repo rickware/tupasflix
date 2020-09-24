@@ -26,6 +26,7 @@
           "functions": "only-multiline"
         }
       ],
-      "react/jsx-one-expression-per-line": 0
+      "react/jsx-one-expression-per-line": 0,
+      "linebreak-style": ["error", "UNIX"]
     }
 }

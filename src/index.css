@@ -1,21 +1,17 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lemonada', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
-  --primary: #5d0202;
+  --primary: #055624;
   --black: #000000;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
   --white: #FFFFFF;
-  --frontEnd: #e46604;
+  --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
-  --red: #ffbc00;
-  --orange: #f6bc41;
-  --wine: #5d0202;
-  --nova: #e46604;
 }
 
 html,
@@ -26,14 +22,9 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 } 
 
-h3 {
-  background-color: #ffbc00;
-}
-
-#root {
+#root{
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
   flex-direction: column;

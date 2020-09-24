@@ -1,35 +1,26 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components'
 
-const Button = styled(Link)`
-  background-color: var(--frontEnd);
-  border-radius: 5px;
-  border: 1px solid var(--primary);
-  box-sizing: border-box;
-  color: var(--primary);
-  cursor: pointer;
-  display: block ruby;
-  font-size: inherit;
-  font-style: normal;
-  font-weight: bold;
-  height: 45px;
-  margin: 1vw auto;
-  outline: none;
-  padding: 6px 19px 0 19px;
-  text-align: center;
-  text-decoration: none;
-  transition: opacity .3s;
-  width: min-content;
+const Button = styled.button`
 
-  &:hover,
-  &:focus {
-    opacity: .5;
-  }
-  
-@media (max-width: 800px) {
-  height: 32px;
-  padding: 0 2vw;
+color: var(--white);
+border: 1px solid var(--white);
+background-color: var(--black);
+box-sizing: border-box;
+cursor: pointer;
+padding: 16px 24px;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+outline: none;
+border-radius: 5px;
+text-decoration: none;
+display: inline-block;
+transition: opacity .3s;
+&:hover,
+&:focus {
+  opacity: .5;
 }
+  
 `;
 
 export default Button;

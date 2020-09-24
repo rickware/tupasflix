@@ -1,20 +1,30 @@
-import config from '../config';
+import config from '../config/index';
+const URL_VIDEOS = `${config.URL}/videos`
 
-const URL_VIDEOS = `${config.URL}/videos`;
+function create(objetoDoVideo) {
+    return fetch(`${URL_VIDEOS}`,{
+       method: 'POST',
+       headers: {
+           'content-type': 'application/json',
+       },
 
-async function create(objetoDoVideo) {
-  const response = await fetch(`${URL_VIDEOS}?_embed=videos`, {
-    method: 'POST',
-    headers: { 'Content-type': 'application/json' },
     body: JSON.stringify(objetoDoVideo),
-  });
+    })
+        .then(async (response) => {
 
   if (response.ok) {
     const resposta = await response.json();
+
     return resposta;
   }
 
-  throw new Error('Não foi possível cadastrar os dados');
+            throw new Error('Não foi possivel cadastrar os dados');
+            
+        });
 }
+//http://localhost:8080/categorias?_embed=videos
 
-export default { create };
+
+export default {
+    create,
+}

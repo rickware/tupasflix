@@ -70,14 +70,11 @@ export const BannerMainContainer = styled.section`
   position: relative;
   color: #fff;
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
-  background-size: 99% 99%;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   @media (max-width: 800px) {
     height: auto;
     min-height: 50vh;
-     background-position: top;
-     width: 100vw;
   }
 
   &:after,
@@ -104,7 +101,7 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Lemonade', sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
@@ -116,9 +113,9 @@ export const WatchButton = styled.button`
   text-decoration: none;
   display: inline-block;
   border: 1px solid transparent;
-  color: var(--frontEnd);
-  background: var(--primary);
-  border-color: var(--blackLighter);
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--black);
   transition: opacity .3s;
   display: none;
   margin: 0 auto;

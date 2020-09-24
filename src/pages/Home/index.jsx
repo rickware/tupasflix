@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import categoriasRepository from '../../repositories/categorias';
+import catrep from '../../repositories/categorias';
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 
@@ -20,9 +20,11 @@ function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
   useEffect(() => {
-    categoriasRepository.getAllWithVideos().then((categoriasComVideos) => {
-      setDadosIniciais(categoriasComVideos);
-    }).catch((err) => { console.log(err.message); });
+    catrep.getAllWithVideos()
+      .then((categoriasComVideos) => {
+        setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => { console.log(err.message); });
   }, []);
 
   return (

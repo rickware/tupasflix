@@ -1,26 +1,27 @@
-import URL from '../config';
+import URL from '../config/index';
+const URL_CATEGORIES = URL+'/categorias';
 
-const URL_CATEGORIES = `${URL}/categorias`;
-
-async function getAll() {
-  const ask = await fetch(`${URL_CATEGORIES}`);
-  if (ask.ok) {
-    const answer = await ask.json();
-    return answer;
-  }
-  throw new Error('Não foi possível pegar os dados :(');
+function getAll() {
+  return fetch(`${URL_CATEGORIES}`)
+    .then(async (response) => {
+      if (response.ok) {
+        const resposta = await response.json();
+        return resposta;
+      }
+      throw new Error('Não foi possivel retornar os dados');
+    });
 }
 
-async function getAllWithVideos() {
-  const ask = await fetch(`${URL_CATEGORIES}?_embed=videos`);
-  if (ask.ok) {
-    const answer = await ask.json();
-    return answer;
-  }
-  throw new Error('Não foi possível retornar os dados');
+function getAllWithVideos() {
+  return fetch(`${URL_CATEGORIES}?_embed=videos`)
+    .then(async (response) => {
+      if (response.ok) {
+        const resposta = await response.json();
+        return resposta;
+      }
+      throw new Error('Não foi possivel retornar os dados');
+    });
 }
+//http://localhost:8080/categorias?_embed=videos
 
-export default {
-  getAllWithVideos,
-  getAll
-};
+export default { getAllWithVideos, getAll }

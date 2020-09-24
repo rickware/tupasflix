@@ -1,8 +1,6 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
-import tupas from '../../assets/Tupas.jpg';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -13,25 +11,24 @@ function getYouTubeId(youtubeURL) {
 }
 
 export default function BannerMain({
-  // videoTitle,
-  // videoDescription,
-  url
+  videoTitle,
+  videoDescription,
+  url,
 }) {
   const youTubeID = getYouTubeId(url);
-  // const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
+  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
   return (
-    <BannerMainContainer backgroundImage={tupas}>
+    <BannerMainContainer backgroundImage={bgUrl}>
       <ContentAreaContainer>
         <ContentAreaContainer.Item>
-          { /* <ContentAreaContainer.Title>
+          <ContentAreaContainer.Title>
             {videoTitle}
           </ContentAreaContainer.Title>
 
           <ContentAreaContainer.Description>
             {videoDescription}
           </ContentAreaContainer.Description>
-        */ }
         </ContentAreaContainer.Item>
 
         <ContentAreaContainer.Item>
@@ -39,14 +36,10 @@ export default function BannerMain({
             youtubeID={youTubeID}
           />
           <WatchButton>
-            Destaque
+            Assistir
           </WatchButton>
         </ContentAreaContainer.Item>
       </ContentAreaContainer>
     </BannerMainContainer>
   );
 }
-
-BannerMain.propTypes = {
-  url: propTypes.string.isRequired
-};
